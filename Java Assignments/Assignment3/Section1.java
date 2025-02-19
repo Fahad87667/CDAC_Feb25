@@ -19,17 +19,17 @@ public class Main {
 
 
 // Snippet 2:  
-public class Main { 
+public class Section1 { 
     static void main(String[] args) { 
         System.out.println("Hello, World!"); 
     } 
 } 
 //  What happens when you compile and run this code? 
-// --- Compiled Successfully but thrown Error: Main method not found in class Main2,"Public" //     is missing in main method. 
+// --- Compiled Successfully but thrown Error: Section1 method not found in class Section12,"Public" //     is missing in main method. 
 
 -------------------------------------------------------------------------------------------
 // Snippet 3:  
-public class Main { 
+public class Section1 { 
     public static int main(String[] args) { 
         System.out.println("Hello, World!"); 
         return 0; 
@@ -37,19 +37,19 @@ public class Main {
 }
 
 //  What error do you encounter? Why is void used in the main method? 
- --- Compiled successfully but thrown Error: Main method not found in class Main3, please define the main method as:
+ --- Compiled successfully but thrown Error: Section1 method not found in class Section13, please define the main method as:
    public static void main(String[] args)
 -- Void - indicates that the method does not return any value, because main method only runs the program but doesn't return any value that's why we use void.
 -------------------------------------------------------------------------------------------
 
 // Snippet 4:  
-public class Main { 
+public class Section1 { 
     public static void main() { 
         System.out.println("Hello, World!"); 
     } 
 } 
  What happens when you compile and run this code? Why is String[] args needed? 
---- Compiled Successfully but thrown runtime Error: Main method not found in class Main4, please define the main method as:
+--- Compiled Successfully but thrown runtime Error: Section1 method not found in class Section14, please define the main method as:
    public static void main(String[] args)
 --- Strings[] args needed because it accepts comman-line arguments
 --- Strings[] is the array of strings
@@ -57,7 +57,7 @@ public class Main {
 -------------------------------------------------------------------------------------------
 
 // Snippet 5:  
-public class Main { 
+public class Section1 { 
     public static void main(String[] args) { 
         System.out.println("Main method with String[] args"); 
     } 
@@ -66,12 +66,12 @@ public class Main {
     } 
 } 
 //  Can you have multiple main methods? What do you observe? 
--- No we can't have multiple main methods in a same class, I observed it only print the Main method with String[] args.
+-- No we can't have multiple main methods in a same class, I observed it only print the main method with String[] args.
 -------------------------------------------------------------------------------------------
 
  
 // Snippet 6:  
-public class Main { 
+public class Section1 { 
     public static void main(String[] args) { 
         int x = y + 10; 
         System.out.println(x); 
@@ -88,7 +88,7 @@ public class Main {
 
 
 // Snippet 7:  
-public class Main { 
+public class Section1 { 
     public static void main(String[] args) { 
         int x = "Hello"; 
         System.out.println(x); 
@@ -103,7 +103,7 @@ public class Main {
 
 
 //Snippet 8:  
-public class Main { 
+public class Section1 { 
     public static void main(String[] args) { 
         System.out.println("Hello, World!");
     } 
@@ -117,7 +117,7 @@ public class Main {
 -------------------------------------------------------------------------------------------
 
 //Snippet 9:  
-public class Main { 
+public class Section1 { 
     public static void main(String[] args) { 
         int class = 10; 
         System.out.println(class); 
@@ -144,7 +144,7 @@ Assignment3.java:123: error: <identifier> expected
 
 
 // Snippet 10:  
-public class Main { 
+public class Section1 { 
     public void display() { 
         System.out.println("No parameters"); 
     } 
@@ -167,7 +167,7 @@ Assignment3.java:155: error: non-static method display(int) cannot be referenced
 -------------------------------------------------------------------------------------------
 
 // Snippet 11:  
-public class Main { 
+public class Section1 { 
     public static void main(String[] args) { 
         int[] arr = {1, 2, 3}; 
         System.out.println(arr[5]); 
@@ -180,7 +180,7 @@ public class Main {
 
 
 // Snippet 12:  
-public class Main { 
+public class Section1 { 
     public static void main(String[] args) { 
         while (true) { 
             System.out.println("Infinite Loop"); 
@@ -194,7 +194,7 @@ public class Main {
 
 
 // Snippet 13:  
-public class Main { 
+public class Section1 { 
     public static void main(String[] args) { 
         String str = null; 
         System.out.println(str.length()); 
@@ -208,7 +208,7 @@ public class Main {
 
 
 // Snippet 14:  
-public class Main { 
+public class Section1 { 
     public static void main(String[] args) { 
         double num = "Hello"; 
         System.out.println(num); 
@@ -221,7 +221,7 @@ public class Main {
 -------------------------------------------------------------------------------------------
 
 // Snippet 15:  
-public class Main { 
+public class Section1 { 
     public static void main(String[] args) { 
         int num1 = 10; 
         double num2 = 5.5; 
@@ -237,7 +237,7 @@ public class Main {
 -------------------------------------------------------------------------------------------
 
 // Snippet 16:  
-public class Main { 
+public class Section1 { 
     public static void main(String[] args) { 
         int x = 5; 
         int y = 0; 
@@ -251,7 +251,7 @@ public class Main {
 -------------------------------------------------------------------------------------------
 
 // Snippet 17:  
-public class Main { 
+public class Section1 { 
     public static void main(String[] args) { 
         int a = 10; 
         int b = 5; 
@@ -260,14 +260,14 @@ public class Main {
     } 
 } 
 //  What compilation error occurs? Why is the ** operator not valid in Java? 
--- Main.java:256: error: illegal start of expression
+-- Section1.java:256: error: illegal start of expression
         int result = a ** b;
 -- Because java does not have any exponentiation operator like in python, 
 -- instead javaprovides math.pow(base, exponent).
 -------------------------------------------------------------------------------------------
 
 // Snippet 18:  
-public class Main { 
+public class Section1 { 
     public static void main(String[] args) { 
         int a = 10; 
         int b = 5; 
@@ -281,7 +281,7 @@ public class Main {
 -------------------------------------------------------------------------------------------
 
 // Snippet 19:  
-public class Main { 
+public class Section1 { 
     public static void main(String[] args) { 
         int a = 10; 
         int b = 0; 
@@ -291,13 +291,13 @@ public class Main {
 } 
 //  What runtime exception is thrown? Why does division by zero cause an issue in Java?
 // Exception in thread "main" java.lang.ArithmeticException: / by zero
-//       at Main.main(Main.java:285)
+//       at Section1.main(Section1.java:285)
 // denominator should not be a Zero in division, because division is undefined.
 
 -------------------------------------------------------------------------------------------
 
 // Snippet 20:  
-public class Main { 
+public class Section1 { 
     public static void main(String[] args) { 
         System.out.println("Hello, World") 
     } 
@@ -308,13 +308,13 @@ public class Main {
 -------------------------------------------------------------------------------------------
 
 // Snippet 21:  
-public class Main { 
+public class Section1 { 
     public static void main(String[] args) { 
         System.out.println("Hello, World!"); 
     // Missing closing brace here 
 } 
 //  What does the compiler say about mismatched braces?
-// Main.java:313: error: reached end of file while parsing
+// Section1.java:313: error: reached end of file while parsing
 // }
 //  ^
 // 1 error
@@ -322,7 +322,7 @@ public class Main {
 -------------------------------------------------------------------------------------------
 
 // Snippet 22:  
-public class Main { 
+public class Section1 { 
     public static void main(String[] args) { 
         static void displayMessage() { 
             System.out.println("Message"); 
@@ -330,17 +330,17 @@ public class Main {
     } 
 } 
 //  What syntax error occurs? Can a method be declared inside another method? 
-Main.java:325: error: illegal start of expression
+Section1.java:325: error: illegal start of expression
         static void displayMessage() {
         ^
-Main.java:329: error: class, interface, enum, or record expected
+Section1.java:329: error: class, interface, enum, or record expected
 }
 // No, Methods must be defined at the class level, not within other methods.
 
 -------------------------------------------------------------------------------------------
 
 // Snippet 23:  
-public class Main { 
+public class Section1 { 
     public static void main(String[] args) { 
         int value = 2; 
         switch(value) { 
@@ -363,7 +363,7 @@ public class Main {
 -------------------------------------------------------------------------------------------
 
 // Snippet 24:  
-public class Main { 
+public class Section1 { 
     public static void main(String[] args) { 
         int level = 1; 
         switch(level) { 
@@ -387,7 +387,7 @@ public class Main {
 -------------------------------------------------------------------------------------------
 
 // Snippet 25:  
-public class Main { 
+public class Section1 { 
     public static void main(String[] args) { 
         double score = 85.0; 
         switch(score) { 
@@ -405,20 +405,20 @@ public class Main {
 //  Error to Investigate: Why does this code not compile?
 // What does the error tell you about the types allowed in switch expressions?
 // How can you modify the code to make it work? 
--- Main.java:391: error: primitive patterns are a preview feature and are disabled by default.
+-- Section1.java:391: error: primitive patterns are a preview feature and are disabled by default.
         switch(score) {
               ^
   (use --enable-preview to enable primitive patterns)
-Main.java:392: error: constant label of type int is not compatible with switch selector type double
+Section1.java:392: error: constant label of type int is not compatible with switch selector type double
             case 100:
                  ^
-Main.java:395: error: constant label of type int is not compatible with switch selector type double
+Section1.java:395: error: constant label of type int is not compatible with switch selector type double
             case 85:
 --- To fix this issue we can change the data type from double to int.
 -------------------------------------------------------------------------------------------
 
 // Snippet 26:  
-public class Main { 
+public class Section1 { 
     public static void main(String[] args) { 
         int number = 5; 
         switch(number) { 
@@ -435,7 +435,7 @@ public class Main {
 } 
 //  Error to Investigate: Why does the compiler complain about duplicate case labels? 
 // What happens when you have two identical case labels in the same switch block? 
-//-- Main.java:426: error: duplicate case label
+//-- Section1.java:426: error: duplicate case label
 //  Switch cases must be unique.
 
 -------------------------------------------------------------------------------------------
