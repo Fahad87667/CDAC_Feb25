@@ -12,7 +12,17 @@ public static void main(String[] args){
 
 //-----------------------------------------------------------------------------------------
 
-// 2.
+// 2.Write a program to compute the factorial of the number 10. 
+
+class Question2{
+	public static void main(String[] args){
+		int num = 10;
+		int factorial=1;
+		for(int i=1;i<=num;i++){
+			factorial*=i;
+		}
+		System.out.println(factorial);
+}}
 
 //-----------------------------------------------------------------------------------------
 
@@ -44,7 +54,23 @@ public static void main(String[] args){
 }}
 //-----------------------------------------------------------------------------------------
 
-// 5.
+// 5. Write a program to print the Fibonacci sequence up to the number 21. 
+
+class Question5 {
+    public static void main(String[] args) {
+        int num1 = 0;
+	int num2 = 1;
+        System.out.print(num1 + " " + num2);
+        
+        int next = num1 + num2;
+        while (next <= 21) {
+            System.out.print(" " + next);
+            num1 = num2;
+            num2 = next;
+            next = num1 + num2;
+        }
+}}
+
 
 //-----------------------------------------------------------------------------------------
 
@@ -102,8 +128,19 @@ public static void main(String[] args){
 
 //-----------------------------------------------------------------------------------------
 
-// 9. 
+// 9. Write a program to find and print the largest digit in the number 4825. 
 
+class Question9{
+	public static void main(String[] args){
+		int num = 4825;
+        	int largestdigit = 0;
+		while(num>0){
+			int lastdigit = num%10;
+			if(lastdigit>largestdigit){largestdigit = lastdigit;}
+			num/=10;
+		}
+		System.out.println(largestdigit);
+}}
 //-----------------------------------------------------------------------------------------
 
 // 10. Write a program to print all even numbers between 1 and 50. 
@@ -118,7 +155,20 @@ class Question10{
 
 //-----------------------------------------------------------------------------------------
 
-// 11.
+// 11. Write a Java program to demonstrate the use of both pre-increment and 
+// post-decrement operators in a single expression 
+
+class Question11 {
+    public static void main(String[] args) {
+        int a = 5;
+	int b = 10;
+        int result = ++a - b--;
+        
+        System.out.println("Result: " + result);
+        System.out.println("Updated a: " + a);
+        System.out.println("Updated b: " + b);
+    }
+}
 
 //-----------------------------------------------------------------------------------------
 
