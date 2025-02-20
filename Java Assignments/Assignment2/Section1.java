@@ -2,7 +2,7 @@
 //-----------------------------------------------------------------------------------------
 
 /* Snippet 1:  
-public class Main { 
+public class Section1 { 
     public void main(String[] args) { 
         System.out.println("Hello, World!"); 
     } 
@@ -20,7 +20,7 @@ public class Main {
 
 // Snippet 2:  
 public class Section1 { 
-    static void main(String[] args) { 
+    public static void main(String[] args) { 
         System.out.println("Hello, World!"); 
     } 
 } 
@@ -30,7 +30,7 @@ public class Section1 {
 -------------------------------------------------------------------------------------------
 // Snippet 3:  
 public class Section1 { 
-    public static int main(String[] args) { 
+    public static void main(String[] args) { 
         System.out.println("Hello, World!"); 
         return 0; 
     }  
@@ -44,7 +44,7 @@ public class Section1 {
 
 // Snippet 4:  
 public class Section1 { 
-    public static void main() { 
+    public static void main(String[] args) { 
         System.out.println("Hello, World!"); 
     } 
 } 
@@ -73,6 +73,7 @@ public class Section1 {
 // Snippet 6:  
 public class Section1 { 
     public static void main(String[] args) { 
+	int y = 2;
         int x = y + 10; 
         System.out.println(x); 
     } 
@@ -90,7 +91,7 @@ public class Section1 {
 // Snippet 7:  
 public class Section1 { 
     public static void main(String[] args) { 
-        int x = "Hello"; 
+        String x = "Hello"; 
         System.out.println(x); 
     } 
 } 
@@ -119,8 +120,8 @@ public class Section1 {
 //Snippet 9:  
 public class Section1 { 
     public static void main(String[] args) { 
-        int class = 10; 
-        System.out.println(class); 
+        int clss = 10; 
+        System.out.println(clss); 
     } 
 } 
 
@@ -170,7 +171,7 @@ Assignment3.java:155: error: non-static method display(int) cannot be referenced
 public class Section1 { 
     public static void main(String[] args) { 
         int[] arr = {1, 2, 3}; 
-        System.out.println(arr[5]); 
+        System.out.println(arr[2]); 
     } 
 } 
 //  What runtime exception do you encounter? Why does it occur?
@@ -196,7 +197,7 @@ public class Section1 {
 // Snippet 13:  
 public class Section1 { 
     public static void main(String[] args) { 
-        String str = null; 
+        String str = "null"; 
         System.out.println(str.length()); 
     } 
 } 
@@ -210,7 +211,7 @@ public class Section1 {
 // Snippet 14:  
 public class Section1 { 
     public static void main(String[] args) { 
-        double num = "Hello"; 
+        String num = "Hello"; 
         System.out.println(num); 
     } 
 } 
@@ -225,7 +226,7 @@ public class Section1 {
     public static void main(String[] args) { 
         int num1 = 10; 
         double num2 = 5.5; 
-        int result = num1 + num2; 
+        diuble result = num1 + num2; 
         System.out.println(result); 
     } 
 } 
@@ -240,7 +241,7 @@ public class Section1 {
 public class Section1 { 
     public static void main(String[] args) { 
         int x = 5; 
-        int y = 0; 
+        int y = 10; 
         System.out.println(x / y); 
     } 
 } 
@@ -255,7 +256,7 @@ public class Section1 {
     public static void main(String[] args) { 
         int a = 10; 
         int b = 5; 
-        int result = a ** b; 
+        int result = math.pow(a,b); // a**b is not allowed
         System.out.println(result); 
     } 
 } 
@@ -284,7 +285,7 @@ public class Section1 {
 public class Section1 { 
     public static void main(String[] args) { 
         int a = 10; 
-        int b = 0; 
+        int b = 10; 
         int result = a / b; 
         System.out.println(result); 
     } 
@@ -299,7 +300,7 @@ public class Section1 {
 // Snippet 20:  
 public class Section1 { 
     public static void main(String[] args) { 
-        System.out.println("Hello, World") 
+        System.out.println("Hello, World");
     } 
 } 
  What syntax error occurs? How does the missing semicolon affect compilation? 
@@ -312,7 +313,7 @@ public class Section1 {
     public static void main(String[] args) { 
         System.out.println("Hello, World!"); 
     // Missing closing brace here 
-} 
+} }
 //  What does the compiler say about mismatched braces?
 // Section1.java:313: error: reached end of file while parsing
 // }
@@ -346,10 +347,13 @@ public class Section1 {
         switch(value) { 
             case 1: 
                 System.out.println("Value is 1"); 
+		break;
             case 2: 
                 System.out.println("Value is 2"); 
+		break;
             case 3: 
                 System.out.println("Value is 3"); 
+		break;
             default: 
                 System.out.println("Default case"); 
         } 
@@ -369,10 +373,13 @@ public class Section1 {
         switch(level) { 
             case 1: 
                 System.out.println("Level 1"); 
+		break;
             case 2: 
-                System.out.println("Level 2"); 
+                System.out.println("Level 2");
+		break; 
             case 3: 
                 System.out.println("Level 3"); 
+		break;
             default: 
                 System.out.println("Unknown level"); 
         } 
@@ -389,7 +396,7 @@ public class Section1 {
 // Snippet 25:  
 public class Section1 { 
     public static void main(String[] args) { 
-        double score = 85.0; 
+        float score = 85.0; 
         switch(score) { 
             case 100: 
                 System.out.println("Perfect score!"); 
@@ -425,7 +432,7 @@ public class Section1 {
             case 5: 
                 System.out.println("Number is 5"); 
                 break; 
-            case 5: 
+            case 6: 
                 System.out.println("This is another case 5"); 
                 break; 
             default: 
