@@ -180,7 +180,6 @@ class IncorrectLoopUpdate {
 // How should the loop variable be updated to achieve the desired result? 
 // -- OUTPUT :- 0 2 4
 
-//-----------------------------------------------------------------------------------------
 
 
 
