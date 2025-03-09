@@ -177,3 +177,40 @@ class Ques6{
 7. Rotate an Array
 ○ Rotate the array to the right by k positions.
 */
+
+/* 
+8. Merge Two Sorted Arrays
+○ Merge two sorted arrays into a single sorted array without using extra space
+*/
+
+class Ques8 {
+    public static void main(String[] args) {
+        int[] arr1 = {1, 2, 3, 4, 8};
+        int[] arr2 = {5, 6, 7, 8, 9};
+
+        int n = arr1.length, m = arr2.length;
+        int[] arr3 = new int[n + m]; // New array to store merged result
+        int i = 0, j = 0, k = 0;
+
+        while (i < n && j < m) { // Merge both arrays
+            if (arr1[i] < arr2[j]) {
+                arr3[k++] = arr1[i++];
+            } else {
+                arr3[k++] = arr2[j++];
+            }
+        }
+
+        while (i < n) { // Copy remaining elements of arr1
+            arr3[k++] = arr1[i++];
+        }
+
+        while (j < m) { // Copy remaining elements of arr2
+            arr3[k++] = arr2[j++];
+        }
+
+        // Print merged array
+        for (int num : arr3) {
+            System.out.print(num + " ");
+        }
+    }
+}
