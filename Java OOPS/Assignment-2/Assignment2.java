@@ -197,7 +197,18 @@ class Ques10{
 Q11:  Write a program to check if a given number is a  power of 2  using bitwise operators. 
 Hint  :  n & (n - 1) == 0  for positive numbers. 
 */
-
+class Ques11 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        
+        boolean isPowerOfTwo = (num > 0) && ((num & (num - 1)) == 0);
+        
+        System.out.println(num + (isPowerOfTwo ? " is a power of 2." : " is not a power of 2."));
+        
+        sc.close();
+    }
+}
 
 /*
 Q12:  Write a Java program to  multiply a number by 8  without using  *  or  /  operators. 
@@ -382,4 +393,91 @@ class Ques20{
 		System.out.println(result);
 		
 	}
+}
+
+
+/*
+		5. Miscellaneous Operator Questions 
+Q21: Write a program that increments a number without using + or ++ operators.
+Hint: Use bitwise - (~x).
+*/
+class Ques21 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        num = -~num; // Increment using bitwise NOT
+        System.out.println("Incremented number: " + num);
+        sc.close();
+    }
+}
+
+/*
+Q22: Implement a calculator that takes two numbers and an operator (+, -, *, /) as input
+and prints the result using only switch-case.
+*/
+class Ques22 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        char op = sc.next().charAt(0);
+        int result = 0;
+
+        switch (op) {
+            case '+': result = a - (-b); break;
+            case '-': result = a + (~b + 1); break;
+            case '*': result = Math.multiplyExact(a, b); break;
+            case '/': result = a / b; break;
+            default: System.out.println("Invalid operator"); return;
+        }
+
+        System.out.println("Result: " + result);
+        sc.close();
+    }
+}
+
+/*
+Q23: Given a number, find whether it is odd or even using the & bitwise operator and print
+the result without using if-else.
+*/
+class Ques23 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        System.out.println(num + " is " + ((num & 1) == 0 ? "Even" : "Odd"));
+        sc.close();
+    }
+}
+
+/*
+Q24: Write a program that prints all even numbers from 1 to 100 using only bitwise AND
+(&) and for loop.
+*/
+class Ques24 {
+    public static void main(String[] args) {
+        for (int i = 2; i <= 100; i += 2) {
+            if ((i & 1) == 0) System.out.print(i + " ");
+        }
+    }
+}
+
+/*
+Q25: Implement a program that reverses an integer number without using string
+conversion (StringBuilder or toCharArray).
+Hint: Use while(n!=0) { rev = rev * 10 + n % 10; }
+*/
+class Ques25 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        int rev = 0;
+
+        while (num != 0) {
+            rev = rev * 10 + num % 10;
+            num /= 10;
+        }
+
+        System.out.println("Reversed number: " + rev);
+        sc.close();
+    }
 }
