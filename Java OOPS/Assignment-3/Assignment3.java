@@ -214,3 +214,93 @@ class Ques8 {
         }
     }
 }
+
+/*
+9. Find Missing Number in an Array
+○ Given an array of size n-1 containing numbers from 1 to n, find the missing number
+*/
+
+class Ques9{
+	public static void main(String[] args){
+		int[] arr = {1,2,3,4,5};
+		
+		int n = arr.length+1;
+		int sum = n*(n+1)/2;
+		int sum_arr = 0;
+		
+		for(int i=0; i < arr.length; i++){
+			sum_arr += arr[i];
+		}
+		
+		int missing_num = sum-sum_arr;
+		
+		System.out.println(missing_num);
+	}
+}
+
+/*
+10. Find Intersection and Union of Two Arrays
+○ Find the intersection and union of two unsorted arrays.
+*/
+
+class Ques10 {
+    public static void main(String[] args) {
+        int[] arr1 = {1, 2, 3, 4};
+        int[] arr2 = {2, 3};
+
+        int[] union = new int[arr1.length + arr2.length];
+        int unionIndex = 0;
+
+        // Copy arr1 into union
+        for (int i = 0; i < arr1.length; i++) {
+            union[unionIndex++] = arr1[i];
+        }
+
+        // Copy unique elements of arr2 into union
+        for (int i = 0; i < arr2.length; i++) {
+            for (int j = 0; j < arr1.length; j++) {
+                if (arr2[i] == arr1[j]) {
+                    break; // If found, exit loop
+                }
+                // If the loop completes without breaking, arr2[i] is not in arr1
+                if (j == arr1.length - 1) {
+                    union[unionIndex++] = arr2[i];
+                }
+            }
+        }
+
+        // Print Union
+        System.out.print("Union: ");
+        for (int i = 0; i < unionIndex; i++) {
+			System.out.print(union[i] + " ");
+		}
+
+        System.out.println();
+
+        // Find and print Intersection
+        System.out.print("Intersection: ");
+        for (int i = 0; i < arr1.length; i++) {
+            for (int j = 0; j < arr2.length; j++) {
+                if (arr1[i] == arr2[j]) {
+                    System.out.print(arr1[i] + " ");
+                    break;
+                }
+            }
+        }
+        System.out.println();
+    }
+}
+
+/*
+11. Find a Subarray with Given Sum
+○ Given an array of integers, find the subarray that sums to a given value S.
+*/
+
+
+/*
+12. Write a program to accept 20 integer numbers in a single Dimensional Array. Find and
+Display the following:
+○ Number of even numbers.
+○ Number of odd numbers.
+○ Number of multiples of 3
+*/
