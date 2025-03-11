@@ -1,3 +1,4 @@
+import java.util.Scanner;
 /*
 1. Find the Largest and Smallest Element
 ○ Given an array, find the smallest and largest elements in it
@@ -296,6 +297,40 @@ class Ques10 {
 ○ Given an array of integers, find the subarray that sums to a given value S.
 */
 
+class Ques11 {
+    public static void findSubarray(int[] arr, int S) {
+        int start = 0;
+		int sum = 0;
+		boolean found = false;
+
+        for (int end = 0; end < arr.length; end++) {
+            sum += arr[end];
+
+            while (sum > S){ 
+                sum -= arr[start++];
+			}
+
+            if (sum == S) {
+				for (int i = start; i <= end; i++){
+					System.out.print(arr[i] + " ");
+				}
+				found = true;
+				System.out.println();  // Print new line
+			}
+			
+        }
+		if (!found){
+			System.out.println("-1"); // If no subarray found
+		}
+        
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {1, 4, 20, 3, 10, 5};
+        int S = 33;
+        findSubarray(arr, S);
+    }
+}
 
 /*
 12. Write a program to accept 20 integer numbers in a single Dimensional Array. Find and
@@ -304,3 +339,261 @@ Display the following:
 ○ Number of odd numbers.
 ○ Number of multiples of 3
 */
+
+class Ques12{
+	
+	static void even(int[] arr){
+		System.out.print("Even Numbers: ");
+		for(int i=0;i<arr.length;i++){
+			if(arr[i]%2==0){
+				System.out.print(arr[i]+" ");
+			}
+		}
+		System.out.println();
+	}
+	
+	static void odd(int[] arr){
+		System.out.print("Odd Numbers: ");
+		for(int i=0;i<arr.length;i++){
+			if(arr[i]%2==1){
+				
+				System.out.print(arr[i]+" ");
+			}
+		}
+		System.out.println();
+	}
+	
+	static void Multiplesof3(int[] arr){
+		System.out.print("Multiples of 3: ");
+		for(int i=0;i<arr.length;i++){
+			if(arr[i]%3==0){
+				
+				System.out.print(arr[i]+" ");
+			}
+		}
+		System.out.println();
+	}
+	
+	public static void main(String[] args){
+		
+		Scanner sc = new Scanner(System.in);
+		int[] arr = new int[20];
+		
+		for(int a=0;a<arr.length;a++){
+			arr[a] = sc.nextInt();
+		}
+		
+		Ques12.even(arr);
+		Ques12.odd(arr);
+		Ques12.Multiplesof3(arr);
+		
+		sc.close();
+	}
+}
+/*
+13. Write a program to accept the marks in Physics, Chemistry and Maths secured by 20 class
+students in a single Dimensional Array. Find and display the following:
+○ Number of students securing 75% and above in aggregate.
+○ Number of students securing 40% and below in aggregate
+*/
+
+
+
+/*
+14. Write a program in Java to accept 20 numbers in a single dimensional array arr[20]. Transfer
+and store all the even numbers in an array even[ ] and all the odd numbers in another array
+odd[ ]. Finally, print the elements of the even & the odd array.
+*/
+
+class Ques14{
+	
+	static void even(int[] arr){
+		System.out.print("Even Numbers: [ ");
+		for(int i=0;i<arr.length;i++){
+			if(arr[i]%2==0){
+				System.out.print(arr[i]+" ");
+			}
+		}
+		System.out.println("]");
+	}
+	
+	static void odd(int[] arr){
+		System.out.print("Odd Numbers: [ ");
+		for(int i=0;i<arr.length;i++){
+			if(arr[i]%2==1){
+				
+				System.out.print(arr[i]+" ");
+			}
+		}
+		System.out.println("]");
+	}
+	
+	static void Multiplesof3(int[] arr){
+		System.out.print("Multiples of 3: [ ");
+		for(int i=0;i<arr.length;i++){
+			if(arr[i]%3==0){
+				
+				System.out.print(arr[i]+" ");
+			}
+		}
+		System.out.println("]");
+	}
+	
+	public static void main(String[] args){
+		
+		Scanner sc = new Scanner(System.in);
+		int[] arr = new int[20];
+		
+		for(int a=0;a<arr.length;a++){
+			arr[a] = sc.nextInt();
+		}
+		
+		Ques14.even(arr);
+		Ques14.odd(arr);
+		Ques14.Multiplesof3(arr);
+		
+		sc.close();
+	}
+}
+
+/*
+15. Write a Java program to print all sub-arrays with 0 sum present in a given array of integers.
+Example:
+Input :
+nums1 = { 1, 3, -7, 3, 2, 3, 1, -3, -2, -2 }
+nums2 = { 1, 2, -3, 4, 5, 6 }
+nums3= { 1, 2, -2, 3, 4, 5, 6 }
+Output:
+Sub-arrays with 0 sum : [1, 3, -7, 3]
+Sub-arrays with 0 sum : [3, -7, 3, 2, 3, 1, -3, -2]
+Sub-arrays with 0 sum : [1, 2, -3]
+Sub-arrays with 0 sum : [2, -2]
+*/
+
+class Ques15 {
+    public static void subarrsum(int[] arr) {
+        int n = arr.length;
+
+        for (int i = 0; i < n; i++) {
+            int sum = 0;
+            for (int j = i; j < n; j++) {
+                sum += arr[j];  // Add elements from i to j
+                
+                if (sum == 0) {  // If sum becomes 0, print the subarray
+                    System.out.print("Sub-array with 0 sum: [");
+                    for (int k = i; k <= j; k++) {
+                        System.out.print(arr[k]+" ");
+                    }
+                    System.out.println("]");
+                }
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+		
+        int[] nums1 = {1, 3, -7, 3, 2, 3, 1, -3, -2, -2};
+		
+        subarrsum(nums1);
+
+    }
+}
+
+/*
+18. Print a Matrix
+○ Given an m x n matrix, print all its elements row-wise.
+*/
+class Ques18{
+	public static void main(String[] args){
+	int[][] arr = {{1,2,3},{4,5,6}};
+		
+		for(int i=0;i<arr.length;i++){
+			for(int j=0;j<arr[i].length;j++){
+				System.out.print(arr[i][j]+" ");
+			}
+			System.out.println();
+		}
+		
+	}
+}
+
+/*
+19. Transpose of a Matrix
+○ Given a matrix, return its transpose (swap rows and columns).
+*/
+class Ques19 {
+    public static void main(String[] args) {
+        int[][] arr = { {1, 2, 3}, {4, 5, 6} };
+        int rows = arr.length;
+		int cols = arr[0].length;
+        int[][] temp = new int[cols][rows]; 
+
+        // Compute transpose
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                temp[j][i] = arr[i][j]; // Swap row & column indices
+            }
+        }
+
+        // Print transposed matrix
+        for (int i = 0; i < cols; i++) {
+            for (int j = 0; j < rows; j++) {
+                System.out.print(temp[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+/*
+20. Sum of Two Matrices
+○ Given two matrices of the same size, compute their sum.
+*/
+
+class Ques20 {
+    public static void main(String[] args) {
+        int[][] arr = { {1, 2, 3}, {4, 5, 6} };
+		int sum = 0;
+		
+		for(int i=0;i<arr.length;i++){
+			for(int j=0;j<arr[i].length;j++){
+				sum += arr[i][j];
+			}
+		}
+		System.out.println(sum);
+	}
+}
+
+/*
+21. Row-wise and Column-wise Sum
+○ Find the sum of each row and each column of a given matrix.
+*/
+
+class Ques21 {
+    public static void main(String[] args) {
+        int[][] arr = { {1, 2, 3}, {4, 5, 6} };
+        int rows = arr.length;
+        int cols = arr[0].length;
+
+        // Row-wise Sum
+        System.out.println("Row-wise Sum:");
+        for (int i = 0; i < rows; i++) {
+            int rowSum = 0;
+            for (int j = 0; j < cols; j++) {
+                rowSum += arr[i][j];
+            }
+            System.out.println("Row " + (i + 1) + ": " + rowSum);
+        }
+		System.out.println();
+
+        // Column-wise Sum
+        System.out.println("Column-wise Sum:");
+        for (int j = 0; j < cols; j++) {
+            int colSum = 0;
+            for (int i = 0; i < rows; i++) {
+                colSum += arr[i][j];
+            }
+            System.out.println("Column " + (j + 1) + ": " + colSum);
+        }
+    }
+}
